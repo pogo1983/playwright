@@ -1,2 +1,2 @@
-# playwrigt
+# playwright
 Playwright testing course
