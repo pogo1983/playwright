@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environments Table</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f5f7 0%, #fff 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzYuMjEzIiBoZWlnaHQ9IjU4NS4xNDkiIHZpZXdCb3g9IjAgMCA0NzYuMjEzIDU4NS4xNDkiPjxwYXRoIGQ9Ik0tNzkuMDg4LTEyLjQxYTExOS45NjMsMTE5Ljk2MywwLDAsMSwxOC43LDkuOSwxMTMuMzMyLDExMy4zMzIsMCwwLDEsMTYuMSwxMy4yLDk3LjYyNyw5Ny42MjcsMCwwLDEsMTIuOCwxNS43LDc0LjQyOCw3NC40MjgsMCwwLDEsOC43LDE3LjQsOTguNjIyLDk4LjYyMiwwLDAsMS00LjksMTguOSwxMjEuNDc4LDEyMS40NzgsMCwwLDEtOC42LDE3LjgsMTQ0LjI4MiwxNDQuMjgyLDAsMCwxLTExLjUsMTYuMSwxNjYuOSwxNjYuOSwwLDAsMS0xMy42LDEzLjksMTg3LjQ4NywxODcuNDg3LDAsMCwxLTE1LDExLjEsMjAzLjQ0NywyMDMuNDQ3LDAsMCwxLTE1LjYsOC42LDIxMy4wMTgsMjEzLjAxOCwwLDAsMS0xNS40LDYuNCwyMTQuNjMyLDIxNC42MzIsMCwwLDEtMTQuNCw0LjUsMjA2LjQ1NSwyMDYuNDU1LDAsMCwxLTEyLjYsMi45LDE4Ny4xNjYsMTg3LjE2NiwwLDAsMS0xMCwxLjcsMTU2LjU0MiwxNTYuNTQyLDAsMCwxLTYuNS45LDExNC43ODQsMTE0Ljc4NCwwLDAsMS0yLjMuMiw2Mi40NjIsNjIuNDYyLDAsMCwxLTEyLjctMS4zLDU3LjE3Miw1Ny4xNzIsMCwwLDEtMTEuOC0zLjYsNTQuOTQ2LDU0Ljk0NiwwLDAsMS0xMC42LTUuNyw1NS44NDksNTUuODQ5LDAsMCwxLTktNy41LDYwLjI1Niw2MC4yNTYsMCwwLDEtNy4xLTksNjcuODE3LDY3LjgxNywwLDAsMS01LTEwLDc4LjgsNzguOCwwLDAsMS0yLjctMTAuNyw5Mi45MTcsOTIuOTE3LDAsMCwxLS4yLTExLjEsMTA5LjY1MiwxMDkuNjUyLDAsMCwxLDIuNS0xMSwxMjguODI4LDEyOC44MjgsMCwwLDEsNS4zLTEwLjcsMTQ5LjYzOCwxNDkuNjM4LDAsMCwxLDguMi0xMC4xLDE3MS4zNzEsMTcxLjM3MSwwLDAsMSwxMS4xLTkuMywxOTIuOTc0LDE5Mi45NzQsMCwwLDEsMTMuOS04LjIsMjEyLjI0MSwyMTIuMjQxLDAsMCwxLDE2LjctNi45LDIyNy43NTMsMjI3Ljc1MywwLDAsMSwxOS4zLTUuMywyMzcuMjc1LDIzNy4yNzUsMCwwLDEsMjEuNy0zLjUsMjM5LjAzMywyMzkuMDMzLDAsMCwxLDI0LC0xLjUsMjMyLjA0NCwyMzIuMDQ0LDAsMCwxLDI1LjkuOCwyMTUuNjEyLDIxNS42MTIsMCwwLDEsMjcuMywzLjMsMTg5LjgzOSwxODkuODM5LDAsMCwxLDI4LjIsNi4xLDE1NS4wODgsMTU1LjA4OCwwLDAsMSwyOC42LDkuMSwxMTMuNzA3LDExMy43MDcsMCwwLDEsMjguNCwxMi40LDY4LjMsNjguMywwLDAsMSwyNy42LDE2LjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3OS4wODggMjg5LjQxKSIgZmlsbD0icmdiYSgxNzAsIDE3MCwgMTcwLCAwLjEpIi8+PC9zdmc+') no-repeat center;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 123, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 1000px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        table:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        th {
+            background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        td {
+            font-size: 1em;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        td a {
+            position: relative;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        td a:hover {
+            background: rgba(0, 123, 255, 0.1);
+        }
+        td a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #007BFF;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        td a:hover::after {
+            width: 80%;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+        tr:hover td {
+            background-color: #f1f1f1;
+        }
+        h2 {
+            font-weight: 500;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #007BFF 0%, transparent 100%);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#env">Environments</a>
+        <a href="#important-things">ImportantThings</a>
+        <a href="testplan.html">TestPlan&Releases</a>
+        <a href="#azure">Azure</a>
+        <a href="#tfs">TFS</a>
+		 <a href="#tfs">Tasak</a>
+		 <a href="#tfs">Chronos</a>
+         <a href="#tfs">Asana</a>
+    </div>
+    <div class="container">
+        <h2>Full DBs Environments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>IMFINT05</th>
+                    <th>IMFINT07</th>
+                    <th>IMFINT08</th>
+                    <th>IMFINT10</th>
+                    <th>IMFINT11</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://imfint05.example.com">TIMUI</a></td>
+                    <td><a href="https://imfint07.example.com">TIMUI</a></td>
+                    <td><a href="https://imfint08.example.com">TIMUI</a></td>
+                    <td><a href="https://imfint10.example.com">TIMUI</a></td>
+                    <td><a href="https://imfint11.example.com">TIMUI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://imfint05.example.com">INZICHT</a></td>
+                    <td><a href="https://imfint07.example.com">INZICHT</a></td>
+                    <td><a href="https://imfint08.example.com">INZICHT</a></td>
+                    <td><a href="https://imfint10.example.com">INZICHT</a></td>
+                    <td><a href="https://imfint11.example.com">INZICHT</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://imfint05.example.com">PatientPortal</a></td>
+                    <td><a href="https://imfint07.example.com">PatientPortal</a></td>
+                    <td><a href="https://imfint08.example.com">PatientPortal</a></td>
+                    <td><a href="https://imfint10.example.com">PatientPortal</a></td>
+                    <td><a href="https://imfint11.example.com">PatientPortal</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://imfint05.example.com">PaymentPage</a></td>
+                    <td><a href="https://imfint07.example.com">PaymentPage</a></td>
+                    <td><a href="https://imfint08.example.com">PaymentPage</a></td>
+                    <td><a href="https://imfint10.example.com">PaymentPage</a></td>
+                    <td><a href="https://imfint11.example.com">PaymentPage</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://imfint05.example.com">IAM</a></td>
+                    <td><a href="https://imfint07.example.com">IAM</a></td>
+                    <td><a href="https://imfint08.example.com">IAM</a></td>
+                    <td><a href="https://imfint10.example.com">IAM</a></td>
+                    <td><a href="https://imfint11.example.com">IAM</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://imfint05.example.com">CreditUI</a></td>
+                    <td><a href="https://imfint07.example.com">CreditUI</a></td>
+                    <td><a href="https://imfint08.example.com">CreditUI</a></td>
+                    <td><a href="https://imfint10.example.com">CreditUI</a></td>
+                    <td><a href="https://imfint11.example.com">CreditUI</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://imfint05.example.com">IMD UI</a></td>
+                    <td><a href="https://imfint07.example.com">IMD UI</a></td>
+                    <td><a href="https://imfint08.example.com">IMD UI</a></td>
+                    <td><a href="https://imfint10.example.com">IMD UI</a></td>
+                    <td><a href="https://imfint11.example.com">IMD UI</a></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2 style="margin-top: 40px;">Empty Databases Environments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>IMFDEV01</th>
+                    <th>IMFDEV02</th>
+                    <th>IMFDEV03</th>
+                    <th>IMFDEV04</th>
+                    <th>IMFDEV05</th>
+                    <th>IMFDEV06</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://imfdev01.example.com">IMFDEV01</a></td>
+                    <td><a href="https://imfdev02.example.com">IMFDEV02</a></td>
+                    <td><a href="https://imfdev03.example.com">IMFDEV03</a></td>
+                    <td><a href="https://imfdev04.example.com">IMFDEV04</a></td>
+                    <td><a href="https://imfdev05.example.com">IMFDEV05</a></td>
+                    <td><a href="https://imfdev06.example.com">IMFDEV06</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://imfdev07.example.com">IMFDEV07</a></td>
+                    <td><a href="https://imfdev08.example.com">IMFDEV08</a></td>
+                    <td><a href="https://imfdev09.example.com">IMFDEV09</a></td>
+                    <td><a href="https://imfdev10.example.com">IMFDEV10</a></td>
+                    <td><a href="https://imfdev11.example.com">IMFDEV11</a></td>
+                    <td><a href="https://imfdev12.example.com">IMFDEV12</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://imfdev13.example.com">IMFDEV13</a></td>
+                    <td><a href="https://imfdev14.example.com">IMFDEV14</a></td>
+                    <td><a href="https://imfdev15.example.com">IMFDEV15</a></td>
+                    <td><a href="https://imfdev16.example.com">IMFDEV16</a></td>
+                    <td><a href="https://imfdev17.example.com">IMFDEV17</a></td>
+                    <td><a href="https://imfdev18.example.com">IMFDEV18</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://imfdev19.example.com">IMFDEV19</a></td>
+                    <td><a href="https://imfdev20.example.com">IMFDEV20</a></td>
+                    <td><a href="https://imfdev21.example.com">IMFDEV21</a></td>
+                    <td><a href="https://imfdev22.example.com">IMFDEV22</a></td>
+                    <td><a href="https://imfdev23.example.com">IMFDEV23</a></td>
+                    <td><a href="https://imfdev24.example.com">IMFDEV24</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
