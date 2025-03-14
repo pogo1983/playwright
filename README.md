@@ -1,2 +1,2 @@
 # playwright
-Playwright testing course
+Playwright + TS - Pogo's playground
