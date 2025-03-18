@@ -9,18 +9,27 @@
 //// TODO:
 // here place your solution:
 
-function elementChecker(anArray) {
 
+function elementChecker(anArray) {
+for (let i=0; i<anArray.length;i++){
+    console.log(anArray[i])
+}
 }
 
+//alternative solution
 
+function elementChecker2(anArray) {
+    anArray.forEach(i => {
+        console.log(i)
+    });
+    }
 
 
 //// DONT MODIFY CODE BELOW!
 // Here You will find expected result of exercise
 
 elementChecker([1, 2, 'test'])
-
+elementChecker2([1, 2, 'test'])
 // Expected output:
 // Expected output of this script is following info on console:
 // 1

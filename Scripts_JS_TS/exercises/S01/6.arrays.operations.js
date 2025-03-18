@@ -13,9 +13,29 @@
 //// TODO:
 // here place your solution:
 
+let arrayTest = ['abc','def','gh']
+arrayTest.push('xyz')
+console.log(arrayTest)
+let arrayTest2=[1,2,3] 
+let arrayTest3=arrayTest.concat(arrayTest2)
+console.log(arrayTest3)
+arrayTest3[2]=555
+console.log(arrayTest3)
 
+//arrays with loops
+let animals = ['dog', 'cat', 'rabbit'];
 
+for (let i = 0; i < animals.length; i++) {
+  console.log(animals[i]);
+}
 
+for (let animal of animals) {
+  console.log(animal);
+}
+
+animals.forEach(function(animal) {
+  console.log(animal);
+});
 
 
 
