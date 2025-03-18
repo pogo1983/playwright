@@ -1,2 +1,2 @@
 # playwright
-Playwright + TS - Pogo's playground
+Playwright + TS  + JS - Pogo's playground
