@@ -1,0 +1,15 @@
+# Remove any existing nvm installation
+rm -rf ~/.nvm
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# Add to your shell profile if not automatically added
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
+
+# Reload shell config
+source ~/.zshrc
+
+# Install and use Node.js
+nvm install node  # Latest version

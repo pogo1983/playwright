@@ -10,7 +10,10 @@
 //// TODO:
 // here place your solution:
 
-
+let userAge=12
+const userName = 'John Doe'
+console.log(userName)
+console.log(userAge)
 
 
 
