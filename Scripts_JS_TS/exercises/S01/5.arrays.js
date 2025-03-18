@@ -10,6 +10,14 @@
 //// TODO:
 // here place your solution:
 
+let array = ['abc', 'def', 'gh'];
+console.log(array);
+console.log(array[1]);
+
+
+
+
+
 //// DONT MODIFY CODE BELOW!
 // Here You will find expected result of exercise
 
