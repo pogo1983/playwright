@@ -13,8 +13,13 @@
 //// TODO:
 // here place your solution:
 
+function multiplyNumbers (number1,number2){
+    return number1 * number2;
+}
 
-
+const result= multiplyNumbers(3,7);
+console.log (`Result of multiplication: ${result}`);
+console.log (`Result of multiplications is: ${multiplyNumbers(3,8)}`)
 
 
 
