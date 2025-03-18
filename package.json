@@ -1,0 +1,20 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "Playwright + TS - Pogo's playground",
+  "homepage": "https://github.com/pogo1983/playwright#readme",
+  "bugs": {
+    "url": "https://github.com/pogo1983/playwright/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pogo1983/playwright.git"
+  },
+  "license": "ISC",
+  "author": "pogo",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
