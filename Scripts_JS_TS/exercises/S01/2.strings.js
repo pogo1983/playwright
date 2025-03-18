@@ -10,9 +10,12 @@
 //// TODO:
 // here place your solution:
 
-
-
-
+const typeTest = 'integration tests';
+const typePassed = 'passed';
+const typeFailed = 'failed';
+console.log(`${typeTest} ${typePassed} ${typeFailed}`);
+console.log(`${typeTest}: ${typeFailed}`);
+console.log(`${typeTest}: ${typePassed}`);
 
 
 
