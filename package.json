@@ -15,7 +15,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "hello":"node .\\Scripts_JS_TS\\JS_less.js",
-    "bye":"node .\\Scripts_JS_TS\\JS_less.js"
+    "hello": "node .\\Scripts_JS_TS\\JS_less.js",
+    "bye": "node .\\Scripts_JS_TS\\JS_less.js"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "g": "^2.0.1",
+    "npm": "^11.2.0",
+    "stable": "^0.1.8"
   }
 }
