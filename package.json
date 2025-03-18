@@ -12,7 +12,7 @@
   },
   "license": "ISC",
   "author": "pogo",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "hello": "node .\\Scripts_JS_TS\\JS_less.js",
