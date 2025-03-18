@@ -1,0 +1,2 @@
+Some sample data written in file.
+Hello world!

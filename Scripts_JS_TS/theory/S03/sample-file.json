@@ -1,0 +1,9 @@
+{
+    "name": "Dale Cooper",
+    "age": 44,
+    "hair": "black",
+    "height": 182,
+    "weight": 70,
+    "occupation": { "previous": "Deputy", "current": "FBI Special Agent" },
+    "friends": ["Harry S. Truman", "Hawk"]
+}
