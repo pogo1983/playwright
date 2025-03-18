@@ -22,10 +22,46 @@ console.log (`Result of multiplication: ${result}`);
 console.log (`Result of multiplications is: ${multiplyNumbers(3,8)}`)
 
 
+//JS closure function
 
+function createLogger(prefix) {
+    // Zwracamy nową funkcję
+    return function (message) {
+      console.log(prefix + ": " + message);
+    };
+  }
+  
+  
+  // Tworzymy dwie różne funkcje-loggery
+  const infoLogger = createLogger("INFO");
+  const errorLogger = createLogger("ERROR");
+  
+  
+  // Użycie
+  infoLogger("To jest wiadomość informacyjna");
+  infoLogger("To jest nowa wiadomość");
+  errorLogger("To jest komunikat o błędzie");
 
-
-
+//
+//next variations:
+function createFilterGreater(filteredValue) {
+    return (element) => element > filteredValue;
+  }
+  
+  function createFilterLess(filteredValue) {
+    return (element) => element < filteredValue;
+  }
+  
+  const greaterThan10 = createFilterGreater(10);
+  
+  const array = [10, 13, 23, -4, 9];
+  
+  console.log(array.filter(greaterThan10)); // [ 13, 23 ]
+  console.log(array.filter(createFilterGreater(10))); // [ 13, 23 ]
+  
+  console.log(array.filter(createFilterGreater(20))); // [ 23 ]
+  
+  console.log(array.filter(createFilterLess(20))); // [ 10, 13, -4, 9 ]
 
 //// DONT MODIFY CODE BELOW!
 // Here You will find expected result of exercise

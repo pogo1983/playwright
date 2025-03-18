@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         
         
         {
@@ -13,7 +14,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Scripts_JS_TS/theory/BONUS/debug/sample-debug.js"
+            "program": "${file}"
         }
     ]
 }
