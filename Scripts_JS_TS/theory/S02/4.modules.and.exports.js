@@ -7,7 +7,8 @@ import { sampleArray } from './4.sample.module.array.js'
 // we can import multiple elements at once:
 import { printArrayOnConsoleWithFor, printArrayOnConsoleWithForeach } from './4.sample.module.functions.js'
 
-// Good practice: we put all imports at the top of the file
+
+// Good practice: we put all imports at the top of the fie
 
 
 

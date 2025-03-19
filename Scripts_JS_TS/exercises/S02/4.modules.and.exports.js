@@ -11,7 +11,10 @@
 
 //// TODO:
 // here place your solution:
+import {printer, userData} from './helpers.js'
 
+printer('Hello Pogo')
+printer(userData)
 
 
 
