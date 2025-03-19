@@ -1,0 +1,21 @@
+Running the K6 Test
+You can run this test using the following command:
+
+# Basic run
+k6 run k6-parallel-api-test.js
+
+# With environment variables
+API_TOKEN=your_token k6 run k6-parallel-api-test.js
+
+# Export results to various formats
+k6 run --out json=results.json k6-parallel-api-test.js
+
+
+Customizing the Test
+To adapt this for your specific API:
+
+Update BASE_URL with your API endpoint
+Update or add more request groups based on your API endpoints
+Modify the payloads to match your API requirements
+Adjust the VU counts and test duration for your testing needs
+Add more specific checks based on your API response format
