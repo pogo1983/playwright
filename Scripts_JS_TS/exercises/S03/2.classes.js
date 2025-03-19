@@ -17,8 +17,30 @@
 
 //// TODO:
 // here place your solution:
+class Human {
+    name = 'Unknown';
+    age = 0;
+
+    
+    constructor(nameClass,ageClass){
+        this.name = nameClass;
+        this.age = ageClass;
+    }
+    
+    increaseAge(){
+        this.age++
+    }
+    introduceMyself(){
+        console.log(`Hi my name is ${this.name} and me age is ${this.age}`)
+    } 
+
+    }
 
 
+const newPerson = new Human('Pogo',56)
+newPerson.increaseAge()
+newPerson.increaseAge()
+newPerson.introduceMyself()
 
 
 
