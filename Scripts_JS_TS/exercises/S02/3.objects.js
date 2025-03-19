@@ -12,8 +12,18 @@
 
 //// TODO:
 // here place your solution:
+const testUser = {
 
-
+    userName : 'Pogo',
+    address : 'Banino',
+    password: 'testpass'
+}
+console.log(testUser, ' as Before Adding Rights')
+testUser ['rights'] = ['write','read']
+console.log(testUser,' as After Adding Rights')
+console.log(testUser.userName,' as After Adding Rights')
+testUser['userName']='PogoAdmin'
+console.log(testUser.userName,' as After changing name Rights')
 
 
 

@@ -68,11 +68,14 @@ console.log('human after adding occupation:', human)
 
 
 // we can add/change new property that is another object:
-const occupation = {
+// const occupation = {
+//     'previous': 'Deputy',
+//     'current': 'FBI Special Agent'
+// }
+human['occupation'] = {
     'previous': 'Deputy',
     'current': 'FBI Special Agent'
 }
-human['occupation'] = occupation
 
 console.log('human after changing occupation:', human)
 // it will return following result on console:
