@@ -71,9 +71,13 @@ export default function() {
   group('SMS Sending API Test', () => {
     // Create SMS payload
     const payload = JSON.stringify({
-      phoneNumber: generateRandomPhone(),
-      message: generateRandomMessage(),
-      sender: "K6TEST"
+      sender: "KPN API TEST",
+      messages: [
+        {
+          mobile_number: "+31655540840",
+          content: "Hi from KPN! 1"
+        }
+      ]
     });
 
     // Send SMS request
