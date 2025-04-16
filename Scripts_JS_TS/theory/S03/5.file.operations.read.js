@@ -12,7 +12,7 @@ import { readFileSync, readFile, writeFileSync } from 'fs'
 console.log('----------------------------------------------------')
 console.log('Using readFileSync to read txt file content:')
 
-const dataFromFileSync = readFileSync('theory/S03/sample-data-file.txt')
+const dataFromFileSync = readFileSync('./Scripts_JS_TS/theory/S03/sample-data-file.txt')
 console.log(dataFromFileSync)
 // it will return following result on console:
 // <Buffer 53 6f 6d 65 20 73 61 6d 70 6c 65 20 64 61 74 61 20 77 72 69 74 74 65 6e 20 69 6e 20 66 69 6c 65 2e 0d 0a 48 65 6c 6c 6f 20 77 6f 72 6c 64 21>
@@ -22,7 +22,7 @@ console.log('----------------------------------------------------')
 console.log('Using readFileSync with utf8 to read txt file content:')
 
 // to have readable output we have to add proper encoding:
-const dataFromFileAsUtf8 = readFileSync('theory/S03/sample-data-file.txt', {encoding:'utf8'})
+const dataFromFileAsUtf8 = readFileSync('./Scripts_JS_TS/theory/S03/sample-data-file.txt', {encoding:'utf8'})
 console.log(dataFromFileAsUtf8)
 // it will return following result on console:
 // Some sample data written in file.
@@ -32,7 +32,7 @@ console.log('----------------------------------------------------')
 console.log('Using readFileSync with utf8 to read json file content:')
 
 // we can also read JSON files:
-const jsonFromFile = readFileSync('theory/S03/sample-file.json', {encoding:'utf8'})
+const jsonFromFile = readFileSync('./Scripts_JS_TS/theory/S03/sample-file.json', {encoding:'utf8'})
 console.log(jsonFromFile)
 // it will return following result on console:
 // {
