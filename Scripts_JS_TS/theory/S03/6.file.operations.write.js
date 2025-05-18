@@ -15,15 +15,15 @@ console.log('Using writeFileSync to create and write to txt file:')
 
 let sampleData = 'test data: ' + Math.random()
 console.log(sampleData)
-writeFileSync('theory/S03/new-data-file.txt', sampleData)
-appendFileSync('theory/S03/new-data-file.txt', sampleData)
+writeFileSync('./Scripts_JS_TS/theory/S03/new-data-file.txt', sampleData)
+appendFileSync('./Scripts_JS_TS/theory/S03/new-data-file.txt', sampleData)
 // now file new-data-file.txt should be created in S03
 
 console.log('----------------------------------------------------')
 console.log('Using readFileSync with utf8 to read txt file content:')
 
 // to have readable output we have to add proper enconding:
-const dataFromFileAsUtf8 = readFileSync('theory/S03/new-data-file.txt', {encoding:'utf8'})
+const dataFromFileAsUtf8 = readFileSync('./Scripts_JS_TS/theory/S03/new-data-file.txt', {encoding:'utf8'})
 console.log(dataFromFileAsUtf8)
 
 
@@ -45,6 +45,6 @@ const sampleJsonData = {
 // TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Object
 //     at writeFileSync (node:fs:2150:5)
 
-writeFileSync('theory/S03/new-data-file.json', JSON.stringify(sampleJsonData))
-const dataFromJsonFileAsUtf8 = readFileSync('theory/S03/new-data-file.json', {encoding:'utf8'})
+writeFileSync('./Scripts_JS_TS/theory/S03/new-data-file.json', JSON.stringify(sampleJsonData))
+const dataFromJsonFileAsUtf8 = readFileSync('./Scripts_JS_TS/theory/S03/new-data-file.json', {encoding:'utf8'})
 console.log(JSON.parse(dataFromJsonFileAsUtf8))
