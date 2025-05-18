@@ -10,6 +10,12 @@
 
 //// TODO:
 // here place your solution:
+import { readFileSync, writeFileSync, appendFileSync } from 'fs'
+
+writeFileSync('./Scripts_JS_TS/exercises/S03/ex3.txt', 'Hello Pogo jaktestowac.pl!')
+
+const newData = readFileSync('./Scripts_JS_TS/exercises/S03/ex3.txt', {encoding:'utf8'})
+console.log(newData)
 
 
 
