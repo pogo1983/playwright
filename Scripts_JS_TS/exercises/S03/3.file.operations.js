@@ -11,13 +11,21 @@
 //// TODO:
 // here place your solution:
 import { readFileSync, writeFileSync, appendFileSync } from 'fs'
-
+const jsonData = {
+'name':'Pogo',
+'age': 42,
+'hair': 'black'
+}
 writeFileSync('./Scripts_JS_TS/exercises/S03/ex3.txt', 'Hello Pogo jaktestowac.pl!')
+
+writeFileSync('./Scripts_JS_TS/exercises/S03/pogo.json', JSON.stringify(jsonData))
 
 const newData = readFileSync('./Scripts_JS_TS/exercises/S03/ex3.txt', {encoding:'utf8'})
 console.log(newData)
 
-
+const newJsonDataRead= readFileSync('./Scripts_JS_TS/exercises/S03/pogo.json', {encoding:'utf8'})
+console.log(JSON.parse(newJsonDataRead))
+console.log(`Hello my Name is ${newJsonDataRead.name} and I am ${newJsonDataRead.age} years old`)
 
 
 
