@@ -51,5 +51,6 @@ const jsonObject = JSON.parse(jsonFromFile)
 
 // now we can use it as JavaScript object:
 console.log('Name from JSON object:', jsonObject['name','age'])
+console.log('Name from JSON object:', jsonObject.name, jsonObject.age)
 // it will return following result on console:
 // Name from JSON object: Dale Cooper
