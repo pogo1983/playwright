@@ -37,9 +37,9 @@ console.log('--------------------------------------')
 // Now lets see how async function will behave:
 
 // uncomment code below to check async:
-// console.log('calling async function without await:')
-// const sampleDataFromAsync = loadUserData()
-// console.log('sampleDataFromAsync:', sampleDataFromAsync)
+console.log('calling async function without await:')
+const sampleDataFromAsync = loadUserData()
+console.log('sampleDataFromAsync:', sampleDataFromAsync)
 
 console.log('Finished!')
 
