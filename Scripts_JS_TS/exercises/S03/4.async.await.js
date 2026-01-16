@@ -15,7 +15,7 @@ const userList = await getUserListFromApi()
 console.log(JSON.stringify(userList))
 
 
-
+console.table(userList)
 
 
 const userList2 =  getUserListFromApi()

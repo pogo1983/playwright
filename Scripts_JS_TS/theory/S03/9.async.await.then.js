@@ -13,7 +13,7 @@ console.log('----------------------------------------------------')
 console.log('Using then() on Promise:')
 const sampleData = loadUserData()
 
-console.log('Processing some data...')
+console.log('Processing some data...')        
 console.log('sampleData:', sampleData)
 console.log('Processing some more data...')
 
