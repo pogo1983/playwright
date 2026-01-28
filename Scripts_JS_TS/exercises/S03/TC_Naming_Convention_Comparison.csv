@@ -1,0 +1,28 @@
+ID,Category,Natural Language Format,Technical Format,Domain,Entity,Action,Scenario,Result
+1,Payment Agreement,BNM - Payment Agreement - Create Direct Debit via Portal,BNM_PaymentAgreement_Create_DirectDebit_Portal,BNM,Payment Agreement / PaymentAgreement,Create,Direct Debit via Portal,
+2,Payment Agreement,BNM - Payment Agreement - Pay Term Successfully,BNM_PaymentAgreement_Pay_Term_Success,BNM,Payment Agreement / PaymentAgreement,Pay,Term,Success
+3,Payment Agreement,BNM - Payment Agreement - Reject Term,BNM_PaymentAgreement_Reject_Term_Failed,BNM,Payment Agreement / PaymentAgreement,Reject,Term,Failed
+4,Payment Agreement,BNM - Payment Agreement - Break Agreement After Rejection,BNM_PaymentAgreement_Break_AfterRejection,BNM,Payment Agreement / PaymentAgreement,Break,After Rejection,
+5,Acquisition,BNM - Acquisition - Create Direct Debit for AP304,BNM_Acquisition_Create_DirectDebit_AP304,BNM,Acquisition,Create,Direct Debit for AP304,
+6,Acquisition,BNM - Acquisition - Pay Direct Debit Successfully,BNM_Acquisition_Pay_DirectDebit_Success,BNM,Acquisition,Pay,Direct Debit,Success
+7,Acquisition,BNM - Acquisition - Reject Direct Debit,BNM_Acquisition_Reject_DirectDebit_Failed,BNM,Acquisition,Reject,Direct Debit,Failed
+8,Acquisition,BNM - Acquisition - Retry Direct Debit After Rejection,BNM_Acquisition_Retry_DirectDebit_AfterRejection,BNM,Acquisition,Retry,Direct Debit,After Rejection
+9,BA Invoice,BNM - BA Invoice - Create Direct Debit Successfully,BNM_BAInvoice_Create_DirectDebit_Success,BNM,BA Invoice / BAInvoice,Create,Direct Debit,Success
+10,BA Invoice,BNM - BA Invoice - Pay Direct Debit Successfully,BNM_BAInvoice_Pay_DirectDebit_Success,BNM,BA Invoice / BAInvoice,Pay,Direct Debit,Success
+11,BA Invoice,BNM - BA Invoice - Reject Direct Debit,BNM_BAInvoice_Reject_DirectDebit_Failed,BNM,BA Invoice / BAInvoice,Reject,Direct Debit,Failed
+12,BA Invoice,BNM - BA Invoice - Pay Manually Before Batch DD,BNM_BAInvoice_Pay_Manual_BeforeBatchDD,BNM,BA Invoice / BAInvoice,Pay,Manually Before Batch DD,
+13,BA Invoice,BNM - BA Invoice - Pay with Standard Payment Before Batch DD,BNM_BAInvoice_Pay_Standard_BeforeBatchDD,BNM,BA Invoice / BAInvoice,Pay,Standard Payment Before Batch DD,
+14,Patient,BNM - Patient - Create Direct Debit via Portal,BNM_Patient_Create_DirectDebit_Portal,BNM,Patient,Create,Direct Debit via Portal,
+15,Patient,BNM - Patient - Pay Direct Debit Successfully,BNM_Patient_Pay_DirectDebit_Success,BNM,Patient,Pay,Direct Debit,Success
+16,Patient,BNM - Patient - Reject Direct Debit,BNM_Patient_Reject_DirectDebit_Failed,BNM,Patient,Reject,Direct Debit,Failed
+17,Credit,BNM - Credit - Create Installment Direct Debit,BNM_Credit_Create_Installment_DirectDebit,BNM,Credit,Create,Installment Direct Debit,
+18,Credit,BNM - Credit - Pay Installment Successfully,BNM_Credit_Pay_Installment_Success,BNM,Credit,Pay,Installment,Success
+19,Credit,BNM - Credit - Reject Installment,BNM_Credit_Reject_Installment_Failed,BNM,Credit,Reject,Installment,Failed
+20,Standard Payments,BNM - Claim - Pay with Standard Payment,BNM_Claim_Pay_Standard_Payment,BNM,Claim,Pay,Standard Payment,
+21,Standard Payments,BNM - Insurance Receivable - Pay with Standard Payment,BNM_IR_Pay_Standard_Payment,BNM,Insurance Receivable / IR,Pay,Standard Payment,
+22,Helpers,BNM - Helper - Confirm Direct Debit Payment,BNM_Helper_Confirm_DirectDebit_Payment,BNM,Helper,Confirm,Direct Debit Payment,
+23,Helpers,BNM - Helper - Reject Direct Debit Payment,BNM_Helper_Reject_DirectDebit_Payment,BNM,Helper,Reject,Direct Debit Payment,
+24,Helpers,BNM - Helper - Process Direct Debit with Wrong Amount,BNM_Helper_Process_DirectDebit_WrongAmount,BNM,Helper,Process,Direct Debit with Wrong Amount,
+25,Patient Portal,BNM - Patient Portal - Create Account without Invoice,BNM_Portal_Create_Account_WithoutInvoice,BNM,Patient Portal / Portal,Create,Account without Invoice,
+26,Patient Portal,BNM - Patient Portal - Create Account with Invoice,BNM_Portal_Create_Account_WithInvoice,BNM,Patient Portal / Portal,Create,Account with Invoice,
+27,Patient Portal,BNM - Patient Portal - Link Claim to Account,BNM_Portal_Link_Claim_Account,BNM,Patient Portal / Portal,Link,Claim to Account,

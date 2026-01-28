@@ -1,0 +1,28 @@
+Work Item Type,Title,Test Step,Step Action,Step Expected,Area Path,Assigned To,State
+Test Case,BNM - Payment Agreement - Create Direct Debit via Portal,1,Prepare claim with AmountOpen > 0,Claim should be available,TIM,,Design
+Test Case,BNM - Payment Agreement - Pay Term Successfully,1,Use TC from Predecessor,PA Term should be created,TIM,,Design
+Test Case,BNM - Payment Agreement - Reject Term,1,Use TC from Predecessor,PA Term should be created,TIM,,Design
+Test Case,BNM - Payment Agreement - Break Agreement After Rejection,1,Use TC from Predecessor,PA Term should be rejected,TIM,,Design
+Test Case,BNM - Acquisition - Create Direct Debit for AP304,1,Prepare AP304 file with valid DD prerequisites,AP304 file ready,TIM,,Design
+Test Case,BNM - Acquisition - Pay Direct Debit Successfully,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Acquisition - Reject Direct Debit,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Acquisition - Retry Direct Debit After Rejection,1,Use TC from Predecessor,DD should be rejected,TIM,,Design
+Test Case,BNM - BA Invoice - Create Direct Debit Successfully,1,Set up BA with Monthly Subscription,BA with subscription ready,TIM,,Design
+Test Case,BNM - BA Invoice - Pay Direct Debit Successfully,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - BA Invoice - Reject Direct Debit,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - BA Invoice - Pay Manually Before Batch DD,1,Use TC from Predecessor,POF DD created,TIM,,Design
+Test Case,BNM - BA Invoice - Pay with Standard Payment Before Batch DD,1,Use TC from Predecessor,POF DD created,TIM,,Design
+Test Case,BNM - Patient - Create Direct Debit via Portal,1,Open Patient Portal with unpaid invoice,Invoice details shown,TIM,,Design
+Test Case,BNM - Patient - Pay Direct Debit Successfully,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Patient - Reject Direct Debit,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Credit - Create Installment Direct Debit,1,Create or find active credit in PII,Active credit available,TIM,,Design
+Test Case,BNM - Credit - Pay Installment Successfully,1,Use TC from Predecessor,Installment DD created,TIM,,Design
+Test Case,BNM - Credit - Reject Installment,1,Use TC from Predecessor,Installment DD created,TIM,,Design
+Test Case,BNM - Claim - Pay with Standard Payment,1,Prepare claim and CAMT payment,Claim ready for payment,TIM,,Design
+Test Case,BNM - Insurance Receivable - Pay with Standard Payment,1,Use CAMT generator for IR payment,IR with promised amount ready,TIM,,Design
+Test Case,BNM - Helper - Confirm Direct Debit Payment,1,Find ExternalId and amount for last POF DD,POF DD data retrieved,TIM,,Design
+Test Case,BNM - Helper - Reject Direct Debit Payment,1,Find ExternalId and amount for last POF DD,POF DD data retrieved,TIM,,Design
+Test Case,BNM - Helper - Process Direct Debit with Wrong Amount,1,Prepare DD with incorrect amount,DD payment prepared,TIM,,Design
+Test Case,BNM - Patient Portal - Create Account without Invoice,1,Open Patient Portal,Portal opened successfully,TIM,,Design
+Test Case,BNM - Patient Portal - Create Account with Invoice,1,Open Patient Portal and prepare claim,Portal and claim ready,TIM,,Design
+Test Case,BNM - Patient Portal - Link Claim to Account,1,Use TC from Predecessor,Account created,TIM,,Design
