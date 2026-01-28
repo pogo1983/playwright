@@ -1,0 +1,61 @@
+Work Item Type,Title,Test Step,Step Action,Step Expected,Area Path,Assigned To,State
+Test Case,BNM - Payment Agreement - Create Direct Debit via Portal,1,Prepare claim with AmountOpen > 0,Claim should be available,TIM,,Design
+Test Case,BNM - Payment Agreement - Create Direct Debit via Portal,2,Create Payment Agreement via portal for this claim (Prepare PA - PA Portal),PA should be created with DD configuration,TIM,,Design
+Test Case,BNM - Payment Agreement - Create Direct Debit via Portal,3,Execute SQL: Exec CreateDirectDebitFromSettlement @SettlementID,DD should be created successfully,TIM,,Design
+Test Case,BNM - Payment Agreement - Pay Term Successfully,1,Use TC from Predecessor,PA Term should be created,TIM,,Design
+Test Case,BNM - Payment Agreement - Pay Term Successfully,2,Execute SQL: Exec ProcessDirectDebitPayments,Term should be paid,TIM,,Design
+Test Case,BNM - Payment Agreement - Reject Term,1,Use TC from Predecessor,PA Term should be created,TIM,,Design
+Test Case,BNM - Payment Agreement - Reject Term,2,Execute SQL: Exec RejectDirectDebit @DirectDebitPaymentID,Term should be rejected,TIM,,Design
+Test Case,BNM - Payment Agreement - Break Agreement After Rejection,1,Use TC from Predecessor,PA Term should be rejected,TIM,,Design
+Test Case,BNM - Payment Agreement - Break Agreement After Rejection,2,Check PA status in system,PA should be broken,TIM,,Design
+Test Case,BNM - Acquisition - Create Direct Debit for AP304,1,Prepare AP304 file with valid DD prerequisites,AP304 file ready,TIM,,Design
+Test Case,BNM - Acquisition - Create Direct Debit for AP304,2,Import AP304 file into system,File imported successfully,TIM,,Design
+Test Case,BNM - Acquisition - Create Direct Debit for AP304,3,Execute SQL: Exec CreateDirectDebitFromAcquisition @AcquisitionID,DD should be created for acquisition,TIM,,Design
+Test Case,BNM - Acquisition - Pay Direct Debit Successfully,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Acquisition - Pay Direct Debit Successfully,2,Execute SQL: Exec ProcessDirectDebitPayments,DD should be paid successfully,TIM,,Design
+Test Case,BNM - Acquisition - Reject Direct Debit,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Acquisition - Reject Direct Debit,2,Execute SQL: Exec RejectDirectDebit @DirectDebitPaymentID,DD should be rejected,TIM,,Design
+Test Case,BNM - Acquisition - Retry Direct Debit After Rejection,1,Use TC from Predecessor,DD should be rejected,TIM,,Design
+Test Case,BNM - Acquisition - Retry Direct Debit After Rejection,2,Execute SQL: Exec RetryDirectDebit @DirectDebitPaymentID,DD should be retried and paid,TIM,,Design
+Test Case,BNM - BA Invoice - Create Direct Debit Successfully,1,Set up BA with Monthly Subscription,BA with subscription ready,TIM,,Design
+Test Case,BNM - BA Invoice - Create Direct Debit Successfully,2,Create invoice for BA,Invoice created,TIM,,Design
+Test Case,BNM - BA Invoice - Create Direct Debit Successfully,3,Execute SQL: Exec CreateDirectDebitFromInvoice @InvoiceID,DD created for invoice,TIM,,Design
+Test Case,BNM - BA Invoice - Pay Direct Debit Successfully,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - BA Invoice - Pay Direct Debit Successfully,2,Execute SQL: Exec ProcessDirectDebitPayments,DD should be paid successfully,TIM,,Design
+Test Case,BNM - BA Invoice - Reject Direct Debit,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - BA Invoice - Reject Direct Debit,2,Execute SQL: Exec RejectDirectDebit @DirectDebitPaymentID,DD should be rejected,TIM,,Design
+Test Case,BNM - BA Invoice - Pay Manually Before Batch DD,1,Use TC from Predecessor (BA Invoice - Create DD),DD should be created,TIM,,Design
+Test Case,BNM - BA Invoice - Pay Manually Before Batch DD,2,Pay invoice manually before batch DD runs,Invoice paid manually,TIM,,Design
+Test Case,BNM - BA Invoice - Pay Manually Before Batch DD,3,Execute batch DD process,DD should be skipped (already paid),TIM,,Design
+Test Case,BNM - BA Invoice - Pay with Standard Payment Before Batch DD,1,Use TC from Predecessor (BA Invoice - Create DD),DD should be created,TIM,,Design
+Test Case,BNM - BA Invoice - Pay with Standard Payment Before Batch DD,2,Create standard payment for invoice,Standard payment created,TIM,,Design
+Test Case,BNM - BA Invoice - Pay with Standard Payment Before Batch DD,3,Execute batch DD process,DD should be skipped (already paid),TIM,,Design
+Test Case,BNM - Patient - Create Direct Debit via Portal,1,Create patient claim with AmountOpen > 0,Patient claim available,TIM,,Design
+Test Case,BNM - Patient - Create Direct Debit via Portal,2,Patient logs into portal and creates DD,DD created via patient portal,TIM,,Design
+Test Case,BNM - Patient - Pay Direct Debit Successfully,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Patient - Pay Direct Debit Successfully,2,Execute SQL: Exec ProcessDirectDebitPayments,DD paid successfully,TIM,,Design
+Test Case,BNM - Patient - Reject Direct Debit,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Patient - Reject Direct Debit,2,Execute SQL: Exec RejectDirectDebit @DirectDebitPaymentID,DD rejected,TIM,,Design
+Test Case,BNM - Credit - Create Installment Direct Debit,1,Create credit claim with installments,Credit claim with installments ready,TIM,,Design
+Test Case,BNM - Credit - Create Installment Direct Debit,2,Execute SQL: Exec CreateDirectDebitForInstallment @InstallmentID,DD created for installment,TIM,,Design
+Test Case,BNM - Credit - Pay Installment Successfully,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Credit - Pay Installment Successfully,2,Execute SQL: Exec ProcessDirectDebitPayments,Installment paid via DD,TIM,,Design
+Test Case,BNM - Credit - Reject Installment,1,Use TC from Predecessor,DD should be created,TIM,,Design
+Test Case,BNM - Credit - Reject Installment,2,Execute SQL: Exec RejectDirectDebit @DirectDebitPaymentID,Installment DD rejected,TIM,,Design
+Test Case,BNM - Claim - Pay with Standard Payment,1,Create claim with AmountOpen > 0,Claim ready for payment,TIM,,Design
+Test Case,BNM - Claim - Pay with Standard Payment,2,Create standard payment for claim,Standard payment created and matched,TIM,,Design
+Test Case,BNM - Insurance Receivable - Pay with Standard Payment,1,Create insurance receivable with open amount,IR ready for payment,TIM,,Design
+Test Case,BNM - Insurance Receivable - Pay with Standard Payment,2,Create standard payment for IR,Standard payment created and matched,TIM,,Design
+Test Case,BNM - Helper - Confirm Direct Debit Payment,1,Create DD payment entry,DD payment created,TIM,,Design
+Test Case,BNM - Helper - Confirm Direct Debit Payment,2,Execute SQL: Exec ConfirmDirectDebitPayment @DirectDebitPaymentID,DD payment confirmed,TIM,,Design
+Test Case,BNM - Helper - Reject Direct Debit Payment,1,Create DD payment entry,DD payment created,TIM,,Design
+Test Case,BNM - Helper - Reject Direct Debit Payment,2,Execute SQL: Exec RejectDirectDebit @DirectDebitPaymentID,DD payment rejected,TIM,,Design
+Test Case,BNM - Helper - Process Direct Debit with Wrong Amount,1,Create DD payment entry,DD payment created,TIM,,Design
+Test Case,BNM - Helper - Process Direct Debit with Wrong Amount,2,Execute SQL: Exec ProcessDirectDebitWithAmount @DirectDebitPaymentID @WrongAmount,DD processed with incorrect amount,TIM,,Design
+Test Case,BNM - Patient Portal - Create Account without Invoice,1,Patient accesses portal registration,Portal registration page displayed,TIM,,Design
+Test Case,BNM - Patient Portal - Create Account without Invoice,2,Patient creates account without invoice number,Account created successfully,TIM,,Design
+Test Case,BNM - Patient Portal - Create Account with Invoice,1,Prepare invoice for patient,Invoice ready,TIM,,Design
+Test Case,BNM - Patient Portal - Create Account with Invoice,2,Patient creates account with invoice number,Account created and linked to invoice,TIM,,Design
+Test Case,BNM - Patient Portal - Link Claim to Account,1,Use TC from Predecessor (Create Account),Account should exist,TIM,,Design
+Test Case,BNM - Patient Portal - Link Claim to Account,2,Create claim for patient,Claim created,TIM,,Design
+Test Case,BNM - Patient Portal - Link Claim to Account,3,Link claim to patient portal account,Claim linked successfully,TIM,,Design
